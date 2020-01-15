@@ -282,8 +282,6 @@ class Crud extends DbConfig
 	{
 		return is_numeric($val) && floor($val) != $val;
 	}
-
-	
 	
 	
 }
