@@ -28,7 +28,7 @@ if (isset($_GET['pageno'])) {
 
 $no_of_records_per_page = 50;
 $offset = ($pageno-1) * $no_of_records_per_page;
-$where .= $_SESSION['is_global']?'':"and p.country_id=".$_SESSION['country_id']."";
+$where .= $_SESSION['is_global']?'':" and p.country_id=".$_SESSION['country_id']."";
 $sql="SELECT p.id,co.country,p.name p_name,p.category_id,pc.category,p.product_code,po.name,po.mobile,po.email_id,po.order_date,po.status,po.id po_id,po.order_id as order_id
 FROM product_order po left join `products` p on po.product_id=p.id left join product_category pc on p.category_id=pc.id left join country co on p.country_id=co.id
 where p.is_deleted=0 $where order by po.id desc";

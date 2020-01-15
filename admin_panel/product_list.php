@@ -43,7 +43,7 @@ if (isset($_GET['pageno'])) {
 $no_of_records_per_page = 50;
 $offset = ($pageno-1) * $no_of_records_per_page; 
 
-$where .= $_SESSION['is_global']?'':"and p.country_id=".$_SESSION['country_id']."";
+$where .= $_SESSION['is_global']?'':" and p.country_id=".$_SESSION['country_id']."";
 
 $sql="SELECT p.id,p.name,co.country,co.currency,p.category_id,pc.category,p.price,p.product_code,p.status,p.measurement_type m_type,p.measurement_value m_value,p.measurement_unit m_unit,date(p.added_date) added_date,(select thumb_path from products_images where product_id=p.id order by id desc limit 1 ) as thumb FROM `products` p left join product_category pc on p.category_id=pc.id left join country co on p.country_id=co.id
 where p.is_deleted=0 $where order by p.id desc ";

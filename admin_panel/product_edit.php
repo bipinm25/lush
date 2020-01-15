@@ -27,7 +27,7 @@ $category_list = $crud->getData("select id,category from product_category where 
 
 if (isset($_GET['edit_id']) && (int) $_GET['edit_id'] > 0){
 	$edit = true;
-	$where_country = $_SESSION['is_global']?'':"and p.country_id=".$_SESSION['country_id']."";
+	$where_country = $_SESSION['is_global']?'':" and p.country_id=".$_SESSION['country_id']."";
 	$get_product = $crud->getData("select p.name,p.country_id,p.category_id,p.description,p.price,p.product_code,p.measurement_type,p.measurement_value,p.measurement_unit,p.status,pi.id img_id,pi.thumb_path,pi.image_path from products p left join products_images pi on p.id=pi.product_id where p.id = ". (int) $_GET['edit_id']." and p.is_deleted=0 $where_country");
 foreach ($get_product  as $k => $v) {
 		if (!empty($v['thumb_path'])) {
