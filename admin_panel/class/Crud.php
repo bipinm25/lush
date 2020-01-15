@@ -43,7 +43,7 @@ class Crud extends DbConfig
 	public function number_of_records($query)
 	{	
 		$result = $this->connection->query($query);
-		var_dump($query);
+		//var_dump($query);
 		return $result->num_rows;
 	}
 	
