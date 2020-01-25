@@ -7,9 +7,9 @@ where p.is_deleted=0 and p.status=1 order by p.id desc");
 <!DOCTYPE html>
 <html lang="en">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<head>
-<meta charset="utf-8">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#3ed2a7">
@@ -129,6 +129,150 @@ Gift Box
 Chocolates
 <span class="submenu-expander">
 <i class="fa fa-angle-down"></i></span></span></span></a></li>
+<li class="menu-item-has-children position-applied">
+<a href="#">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+INDIA
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+<ul class="nav-item-children" style="display: none; opacity: 1;">
+<li>
+<a href="element-sticky-submenu.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt"><img src="assets/img/india.jpg" style="margin-right: 5px;">
+INDIA
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-business.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/oman.jpg" style="margin-right: 5px;"> OMAN
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-creative.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/bahrain.jpg" style="margin-right: 5px;">BAHRAIN
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-crypto.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/kuwait.jpg" style="margin-right: 5px;">KUWAIT
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-digital-agency.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/uae.jpg" style="margin-right: 5px;">UAE
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-digital-creative.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/qatar.jpg" style="margin-right: 5px;">QATAR
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-mobile.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/Malasia.jpg" style="margin-right: 5px;">MALASIA
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-opus.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/philipines.jpg" style="margin-right: 5px;">PHILIPPINES
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-services.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/saudi.jpg" style="margin-right: 5px;">SAUDI
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+
+
+</ul>
+</li>
 </ul>
 </div>
 </div>

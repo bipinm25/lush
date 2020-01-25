@@ -17,15 +17,15 @@
 </treenode>
 <treenode node="admin_panel/mail/smtp.php;PHP:PHP Include;E:\wamp64\www\lush\products_details.php;f14;4;39;4;;E:\wamp64\www\lush\contact.php;f14;3;39;3;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="check_login.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\product_list.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\order_list.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\order_details.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\header.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;1;29;1;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="check_login.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\order_details.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\header.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\product_list.php;f14;1;29;1;;E:\wamp64\www\lush\admin_panel\order_list.php;f14;1;29;1;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="class/Crud.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\product_list.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\order_list.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\order_details.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\logout.php;f14;2;28;2;;E:\wamp64\www\lush\admin_panel\check_login.php;f14;2;28;2;;E:\wamp64\www\lush\admin_panel\index.php;f14;1;28;1;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;3;28;3;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="class/Crud.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\order_details.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\logout.php;f14;2;28;2;;E:\wamp64\www\lush\admin_panel\check_login.php;f14;2;28;2;;E:\wamp64\www\lush\admin_panel\index.php;f14;1;28;1;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\product_list.php;f14;3;28;3;;E:\wamp64\www\lush\admin_panel\order_list.php;f14;3;28;3;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="class/Validation.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;4;34;4;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="class/common_settings.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\product_list.php;f14;2;39;2;;E:\wamp64\www\lush\admin_panel\order_list.php;f9;2;34;2;;E:\wamp64\www\lush\admin_panel\order_details.php;f9;2;34;2;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;2;39;2;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;2;39;2;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="class/common_settings.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\order_details.php;f9;2;34;2;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;2;39;2;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;2;39;2;;E:\wamp64\www\lush\admin_panel\product_list.php;f14;2;39;2;;E:\wamp64\www\lush\admin_panel\order_list.php;f9;2;34;2;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="footer.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\product_list.php;f21;183;31;183;;E:\wamp64\www\lush\admin_panel\order_list.php;f21;165;31;165;;E:\wamp64\www\lush\admin_panel\order_details.php;f14;213;24;213;;E:\wamp64\www\lush\products_details.php;f20;103;30;103;;E:\wamp64\www\lush\products.php;f20;129;30;129;;E:\wamp64\www\lush\order.php;f20;29;30;29;;E:\wamp64\www\lush\giftboxes.php;f20;57;30;57;;E:\wamp64\www\lush\contact.php;f20;78;30;78;;E:\wamp64\www\lush\chocolates.php;f20;56;30;56;;E:\wamp64\www\lush\cakes.php;f20;57;30;57;;E:\wamp64\www\lush\about_lush.php;f20;65;30;65;;E:\wamp64\www\lush\admin_panel\product_edit.php;f18;228;28;228;;E:\wamp64\www\lush\admin_panel\dashboard.php;f22;92;32;92;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="footer.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\order_details.php;f14;213;24;213;;E:\wamp64\www\lush\products_details.php;f20;103;30;103;;E:\wamp64\www\lush\products.php;f20;129;30;129;;E:\wamp64\www\lush\order.php;f20;29;30;29;;E:\wamp64\www\lush\giftboxes.php;f20;57;30;57;;E:\wamp64\www\lush\contact.php;f20;78;30;78;;E:\wamp64\www\lush\chocolates.php;f20;56;30;56;;E:\wamp64\www\lush\cakes.php;f20;57;30;57;;E:\wamp64\www\lush\about_lush.php;f20;65;30;65;;E:\wamp64\www\lush\admin_panel\product_edit.php;f18;251;28;251;;E:\wamp64\www\lush\admin_panel\dashboard.php;f22;92;32;92;;E:\wamp64\www\lush\admin_panel\product_list.php;f21;214;31;214;;E:\wamp64\www\lush\admin_panel\order_list.php;f21;167;31;167;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 <treenode node="header.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\menu.php;f20;0;30;0;;E:\wamp64\www\lush\products_details.php;f14;61;24;61;;E:\wamp64\www\lush\products.php;f14;5;24;5;;E:\wamp64\www\lush\order.php;f14;4;24;4;;E:\wamp64\www\lush\giftboxes.php;f14;6;24;6;;E:\wamp64\www\lush\contact.php;f14;40;24;40;;E:\wamp64\www\lush\chocolates.php;f14;6;24;6;;E:\wamp64\www\lush\cakes.php;f14;6;24;6;;E:\wamp64\www\lush\about_lush.php;f14;1;24;1;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
@@ -33,82 +33,88 @@
 </treenode>
 <treenode node="mail/smtp.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\order_details.php;f14;6;27;6;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="menu.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\product_list.php;f14;49;22;49;;E:\wamp64\www\lush\admin_panel\order_list.php;f14;42;22;42;;E:\wamp64\www\lush\admin_panel\order_details.php;f14;54;22;54;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;83;22;83;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;8;22;8;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="menu.php;PHP:PHP Include;E:\wamp64\www\lush\admin_panel\order_details.php;f14;54;22;54;;E:\wamp64\www\lush\admin_panel\product_edit.php;f14;86;22;86;;E:\wamp64\www\lush\admin_panel\dashboard.php;f14;8;22;8;;E:\wamp64\www\lush\admin_panel\product_list.php;f14;57;22;57;;E:\wamp64\www\lush\admin_panel\order_list.php;f14;42;22;42;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="Crud;PHP:Class Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f0;3;1;274;;;;vpos;;v;;aDbConfig;;c;;r;;d0,4;;b0,0;;m0;;e">
+<treenode node="Crud;PHP:Class Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f0;3;1;287;;;;vpos;;v;;aDbConfig;;c;;r;;d0,4;;b0,0;;m0;;e">
 <treenode node="__construct;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;5;2;11;;;;vpos;;v;;a;;r;;d1,6;;b1,0;;m0;;e">
 </treenode>
-<treenode node="createThumbnail;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;89;2;116;;;;vpos;;v;;a;;r;;d1,90;;b1,0;;m0;;efilename;;pthumb_width;;pthumb_height;;pupload_dir;;pupload_dir_thumbs;;p;;x;;x;;x;;x;;x">
+<treenode node="createThumbnail;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;90;2;117;;;;vpos;;v;;a;;r;;d1,91;;b1,0;;m0;;efilename;;pthumb_width;;pthumb_height;;pupload_dir;;pupload_dir_thumbs;;p;;x;;x;;x;;x;;x">
 </treenode>
-<treenode node="dashboard_data;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;177;2;225;;;;vpos;;v;;a;;r;;d1,178;;b1,0;;m0;;e">
-<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f26;189;34;189;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="dashboard_data;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;190;2;240;;;;vpos;;v;;a;;r;;d1,191;;b1,0;;m0;;e">
+<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f26;204;34;204;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="&gt;number_of_records;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f24;179;42;179;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="&gt;number_of_records;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f24;194;42;194;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="&gt;x_week_range;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f32;183;45;183;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
-</treenode>
-</treenode>
-<treenode node="delete;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;48;2;60;;;;vpos;;v;;a;;r;;d1,49;;b1,0;;m0;;eid;;ptable;;pcolumn_name;;p;;x;;x;;x">
-<treenode node="&gt;connection;PHP:PHP Word;E:\wamp64\www\lush\admin_panel\class\Crud.php;f18;52;29;52;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="&gt;x_week_range;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f32;198;45;198;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="delete_file;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;118;2;133;;;;vpos;;v;;a;;r;;d34,118;;b1,0;;m0;;e_id;;p;;x">
-<treenode node="&gt;delete;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f15;131;22;131;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
-</treenode>
-<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f21;120;29;120;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="delete;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;49;2;61;;;;vpos;;v;;a;;r;;d1,50;;b1,0;;m0;;eid;;ptable;;pcolumn_name;;p;;x;;x;;x">
+<treenode node="&gt;connection;PHP:PHP Word;E:\wamp64\www\lush\admin_panel\class\Crud.php;f18;53;29;53;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="delete_product_image;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;135;2;151;;;;vpos;;v;;a;;r;;d1,136;;b1,0;;m0;;eimg_id;;p;;x">
-<treenode node="&gt;delete;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;148;15;148;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="delete_file;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;119;2;134;;;;vpos;;v;;a;;r;;d34,119;;b1,0;;m0;;e_id;;p;;x">
+<treenode node="&gt;delete;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f15;132;22;132;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f23;137;31;137;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f21;121;29;121;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="escape_string;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;62;2;65;;;;vpos;;v;;a;;r;;d1,63;;b1,0;;m0;;evalue;;p;;x">
-<treenode node="&gt;connection;PHP:PHP Word;E:\wamp64\www\lush\admin_panel\class\Crud.php;f15;64;26;64;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="delete_product_image;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;136;2;152;;;;vpos;;v;;a;;r;;d1,137;;b1,0;;m0;;eimg_id;;p;;x">
+<treenode node="&gt;delete;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;149;15;149;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f23;138;31;138;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+</treenode>
+<treenode node="escape_string;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;63;2;66;;;;vpos;;v;;a;;r;;d1,64;;b1,0;;m0;;evalue;;p;;x">
+<treenode node="&gt;connection;PHP:PHP Word;E:\wamp64\www\lush\admin_panel\class\Crud.php;f15;65;26;65;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
 <treenode node="execute;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;30;2;40;;;;vpos;;v;;a;;r;;d1,31;;b1,0;;m0;;equery;;p;;x">
 <treenode node="&gt;connection;PHP:PHP Word;E:\wamp64\www\lush\admin_panel\class\Crud.php;f18;32;29;32;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="files_upload;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;67;2;87;;;;vpos;;v;;a;;r;;d1,68;;b1,0;;m0;;etable_id;;pfiles;;p;;x;;x">
-<treenode node="&gt;createThumbnail;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f10;82;26;82;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="files_upload;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;68;2;88;;;;vpos;;v;;a;;r;;d1,69;;b1,0;;m0;;etable_id;;pfiles;;p;;x;;x">
+<treenode node="&gt;createThumbnail;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f10;83;26;83;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="&gt;execute;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f10;83;18;83;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="&gt;execute;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f10;84;18;84;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+</treenode>
+<treenode node="getCountry;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;179;2;188;;;;vpos;;v;;a;;r;;d29,179;;b1,0;;m0;;e">
+<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f20;182;28;182;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
 <treenode node="getData;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;13;2;28;;;;vpos;;v;;a;;r;;d1,14;;b1,0;;m0;;equery;;p;;x">
 <treenode node="&gt;connection;PHP:PHP Word;E:\wamp64\www\lush\admin_panel\class\Crud.php;f18;15;29;15;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="getSettings;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;153;2;158;;;;vpos;;v;;a;;r;;d30,153;;b1,0;;m0;;e">
-<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f20;155;28;155;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="getSettings;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;154;2;159;;;;vpos;;v;;a;;r;;d30,154;;b1,0;;m0;;e">
+<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f20;156;28;156;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="get_session;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;255;2;258;;;;vpos;;v;;a;;r;;d1,256;;b1,0;;m0;;e">
+<treenode node="get_session;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;270;2;273;;;;vpos;;v;;a;;r;;d1,271;;b1,0;;m0;;e">
 </treenode>
-<treenode node="is_decimal;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f1;266;2;269;;;;vpos;;v;;a;;r;;d1,267;;b0,0;;m0;;eval;;p;;x">
+<treenode node="is_decimal;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f1;281;2;284;;;;vpos;;v;;a;;r;;d1,282;;b0,0;;m0;;eval;;p;;x">
 </treenode>
-<treenode node="is_loggedin;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;250;2;253;;;;vpos;;v;;a;;r;;d30,250;;b1,0;;m0;;e">
+<treenode node="is_loggedin;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;265;2;268;;;;vpos;;v;;a;;r;;d30,265;;b1,0;;m0;;e">
 </treenode>
-<treenode node="login;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;160;2;175;;;;vpos;;v;;a;;r;;d46,160;;b1,0;;m0;;euser;;ppass;;pcountry;;p;;x;;x;;x">
-<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f18;162;26;162;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="login;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;161;2;177;;;;vpos;;v;;a;;r;;d46,161;;b1,0;;m0;;euser;;ppass;;pcountry;;p;;x;;x;;x">
+<treenode node="&gt;getCountry;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f9;171;20;171;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+</treenode>
+<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f18;163;26;163;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="number_of_records;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;42;2;46;;;;vpos;;v;;a;;r;;d1,43;;b1,0;;m0;;equery;;p;;x">
+<treenode node="number_of_records;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;42;2;47;;;;vpos;;v;;a;;r;;d1,43;;b1,0;;m0;;equery;;p;;x">
 <treenode node="&gt;connection;PHP:PHP Word;E:\wamp64\www\lush\admin_panel\class\Crud.php;f18;44;29;44;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="product_order_request;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;227;2;239;;;;vpos;;v;;a;;r;;d50,227;;b1,0;;m0;;epost_data;;p;;x">
-<treenode node="&gt;execute;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;236;16;236;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="product_order_request;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;242;2;254;;;;vpos;;v;;a;;r;;d50,242;;b1,0;;m0;;epost_data;;p;;x">
+<treenode node="&gt;execute;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;251;16;251;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
-<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f24;229;32;229;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
+<treenode node="&gt;getData;PHP:Function Call;E:\wamp64\www\lush\admin_panel\class\Crud.php;f24;244;32;244;;;;vpos;;v;;a;;r;;d-1,-1;;b0,0;;m0;;e">
 </treenode>
 </treenode>
-<treenode node="user_logout;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;260;2;264;;;;vpos;;v;;a;;r;;d1,261;;b1,0;;m0;;e">
+<treenode node="user_logout;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;275;2;279;;;;vpos;;v;;a;;r;;d1,276;;b1,0;;m0;;e">
 </treenode>
-<treenode node="x_week_range;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;241;2;247;;;;vpos;;v;;a;;r;;d1,242;;b1,0;;m0;;edate;;p;;x">
+<treenode node="x_week_range;PHP:Function Name;E:\wamp64\www\lush\admin_panel\class\Crud.php;f8;256;2;262;;;;vpos;;v;;a;;r;;d1,257;;b1,0;;m0;;edate;;p;;x">
 </treenode>
 </treenode>
 <treenode node="DbConfig;PHP:Class Name;E:\wamp64\www\lush\admin_panel\class\DbConfig_prod.php;f0;1;1;24;;E:\wamp64\www\lush\admin_panel\class\DbConfig.php;f0;1;1;24;;;;vpos;;v;;a;;r;;d0,2;;b0,0;;m0;;e">
@@ -1464,6 +1470,8 @@
 <treenode node="db;JS:Function Name;E:\wamp64\www\lush\assets\vendors\jquery.min.js;f29093;2;29177;2;;;;vpos;;v;;a;;r;;d29111,2;;b0,0;;m0;;ea;;pb;;pc;;p;;x;;x;;x">
 </treenode>
 <treenode node="dc;JS:Function Name;E:\wamp64\www\lush\assets\vendors\jquery.min.js;f24694;3;24918;3;;;;vpos;;v;;a;;r;;d24714,3;;b0,0;;m0;;ea;;pb;;pc;;pd;;p;;x;;x;;x;;x">
+</treenode>
+<treenode node="delete_product;JS:Function Name;E:\wamp64\www\lush\admin_panel\product_list.php;f0;216;3;220;;;;vpos;;v;;a;;r;;d29,216;;b0,0;;m0;;eid;;p;;x">
 </treenode>
 <treenode node="disable;JS:Function Name;E:\wamp64\www\lush\admin_panel\js\libs\jquery.pjax.js;f0;811;1;821;;;;vpos;;v;;a;;r;;d19,811;;b0,0;;m0;;e">
 </treenode>

@@ -12,12 +12,17 @@
  <added value=""/>
  <lastopfiles>
   <file name="E:\wamp64\www\lush\admin_panel\index.php"/>
+  <file name="E:\wamp64\www\lush\admin_panel\product_list.php"/>
   <file name="E:\wamp64\www\lush\admin_panel\product_edit.php"/>
   <file name="E:\wamp64\www\lush\admin_panel\class\Crud.php"/>
   <file name="E:\wamp64\www\lush\admin_panel\dashboard.php"/>
+  <file name="E:\wamp64\www\lush\admin_panel\order_list.php"/>
   <lastactivefile name=""/>
  </lastopfiles>
  <todoblock>
+  <todofile name="E:\wamp64\www\lush\admin_panel\class\Crud.php">
+   <todo name="TODO" pos="56;179"/>
+  </todofile>
   <todofile name="E:\wamp64\www\lush\admin_panel\js\combodate\combodate.js">
    <todo name="todo: clear method" pos="9;410"/>
   </todofile>
@@ -42,10 +47,10 @@
    <todo name="@TODO check this worked" pos="50;1945"/>
   </todofile>
   <todofile name="E:\wamp64\www\lush\admin_panel\product_edit.php">
-   <todo name="TODO" pos="3;50"/>
-   <todo name="@TODO" pos="2;50"/>
-   <todo name="TODO" pos="3;75"/>
-   <todo name="@TODO" pos="2;75"/>
+   <todo name="TODO" pos="3;53"/>
+   <todo name="@TODO" pos="2;53"/>
+   <todo name="TODO" pos="3;78"/>
+   <todo name="@TODO" pos="2;78"/>
   </todofile>
  </todoblock>
  <dbgurls/>
@@ -205,23 +210,23 @@
   <file name="E:\wamp64\www\lush\admin_panel\class\Validation.php" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\admin_panel\class\DbConfig_prod.php" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\admin_panel\class\DbConfig.php" crc="1578931824022"/>
-  <file name="E:\wamp64\www\lush\admin_panel\class\Crud.php" crc="1578934713463"/>
+  <file name="E:\wamp64\www\lush\admin_panel\class\Crud.php" crc="1579107875514"/>
   <file name="E:\wamp64\www\lush\admin_panel\class\common_settings.php" crc="1574587718000"/>
   <file name="E:\wamp64\www\lush\admin_panel\chrome-app\window.html" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\admin_panel\chrome-app\window-extras.js" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\admin_panel\chrome-app\manifest.json" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\admin_panel\chrome-app\background.js" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\admin_panel\test.php" crc="1574177756000"/>
-  <file name="E:\wamp64\www\lush\admin_panel\product_list.php" crc="1574500300000"/>
-  <file name="E:\wamp64\www\lush\admin_panel\product_edit.php" crc="1574580450000"/>
-  <file name="E:\wamp64\www\lush\admin_panel\order_list.php" crc="1574580806000"/>
+  <file name="E:\wamp64\www\lush\admin_panel\product_list.php" crc="1579103790080"/>
+  <file name="E:\wamp64\www\lush\admin_panel\product_edit.php" crc="1579103839816"/>
+  <file name="E:\wamp64\www\lush\admin_panel\order_list.php" crc="1579103847926"/>
   <file name="E:\wamp64\www\lush\admin_panel\order_details.php" crc="1574592692000"/>
   <file name="E:\wamp64\www\lush\admin_panel\menu.php" crc="1574500604000"/>
   <file name="E:\wamp64\www\lush\admin_panel\logout.php" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\admin_panel\index.php" crc="1578934865015"/>
   <file name="E:\wamp64\www\lush\admin_panel\header.php" crc="1574515360000"/>
   <file name="E:\wamp64\www\lush\admin_panel\footer.php" crc="1574514660000"/>
-  <file name="E:\wamp64\www\lush\admin_panel\dashboard.php" crc="1578934743671"/>
+  <file name="E:\wamp64\www\lush\admin_panel\dashboard.php" crc="1579071340679"/>
   <file name="E:\wamp64\www\lush\admin_panel\check_login.php" crc="1574177756000"/>
   <file name="E:\wamp64\www\lush\products_details.php" crc="1574581162000"/>
   <file name="E:\wamp64\www\lush\products.php" crc="1574177758000"/>
