@@ -1,35 +1,14 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
+if((isset($_GET['country']) && (int)$_GET['country'] > 0)){
+	
+}else{
+	header("location : ")
 }
+	
 include_once('admin_panel/class/Crud.php');
 $crud = new Crud();
-$crud->getCountry();
-if(!empty($_SESSION['country_list'])) {
-	foreach($_SESSION['country_list'] as $k=>$v){
-		$c_ids[]=$v['id'];
-	}	
-}
-$country_id=0;
-if((isset($_GET['country']) && (int)$_GET['country'] > 0)){
-
-	if(!in_array((int)$_GET['country'], $c_ids)){
-		header("location:location.php");
-	}
-
-	$_SESSION['country'] = (int)$_GET['country'];
-		
-	$country_id = (int) $_SESSION['country'];		
-}
-else if(isset($_SESSION['country']) && $_SESSION['country'] > 0 ){
-	$country_id = (int) $_SESSION['country'];
-}
-else{
-	header("location:location.php");
-}
 $products = $crud->getData("SELECT p.id,p.name,p.category_id,pc.category,p.price,p.product_code,p.status,p.measurement_type m_type,p.measurement_value m_value,p.measurement_unit m_unit,(select thumb_path from products_images where product_id=p.id order by id desc limit 1 ) as thumb,(select image_path from products_images where product_id=p.id order by id desc limit 1 ) as image_path FROM `products` p left join product_category pc on p.category_id=pc.id
-where p.is_deleted=0 and p.status=1 and p.country_id=".$country_id." order by p.id desc");
-
+where p.is_deleted=0 and p.status=1 order by p.id desc");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -162,7 +141,7 @@ Chocolates
 <span class="link-txt">
 <span class="link-ext"></span>
 <span class="txt">
-<?=$_SESSION['country_list'][$_SESSION['country']]['country']?>
+INDIA
 <span class="submenu-expander">
 <i class="fa fa-angle-down"></i>
 </span>
@@ -170,25 +149,134 @@ Chocolates
 </span>
 </a>
 <ul class="nav-item-children" style="display: none; opacity: 1;">
-<?php
-foreach($_SESSION['country_list'] as $k=>$v){
-if($v['is_active'] == 0) continue;
-echo '<li>
-<a href="index.php?country='.$v['id'].'">
+<li>
+<a href="element-sticky-submenu.html">
 <span class="link-icon"></span>
 <span class="link-txt">
 <span class="link-ext"></span>
-<span class="txt"><img src="assets/img/'.$v['flag'].'" style="margin-right: 5px;">
-'.strtoupper($v['country']).'
+<span class="txt"><img src="assets/img/india.jpg" style="margin-right: 5px;">
+INDIA
 <span class="submenu-expander">
 <i class="fa fa-angle-down"></i>
 </span>
 </span>
 </span>
 </a>
-</li>';	
-}
-?>
+</li>
+<li>
+<a href="index-business.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/oman.jpg" style="margin-right: 5px;"> OMAN
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-creative.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/bahrain.jpg" style="margin-right: 5px;">BAHRAIN
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-crypto.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/kuwait.jpg" style="margin-right: 5px;">KUWAIT
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-digital-agency.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/uae.jpg" style="margin-right: 5px;">UAE
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-digital-creative.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/qatar.jpg" style="margin-right: 5px;">QATAR
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-mobile.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/Malasia.jpg" style="margin-right: 5px;">MALASIA
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-opus.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/philipines.jpg" style="margin-right: 5px;">PHILIPPINES
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a href="index-services.html">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<img src="assets/img/saudi.jpg" style="margin-right: 5px;">SAUDI
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>
+
+
 </ul>
 </li>
 </ul>

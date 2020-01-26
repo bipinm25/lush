@@ -1,10 +1,11 @@
 <?php
 include_once('admin_panel/class/Crud.php');
 $crud = new Crud();
-$products = $crud->getData("SELECT p.id,p.name,p.category_id,(select thumb_path from products_images where product_id=p.id order by id desc limit 1 ) as thumb,(select image_path from products_images where product_id=p.id order by id desc limit 1 ) as image_path FROM `products` p
-where p.is_deleted=0 and p.status=1 and p.category_id=3 order by p.id desc limit 11");
-
 include_once('header.php');
+
+$products = $crud->getData("SELECT p.id,p.name,p.category_id,(select thumb_path from products_images where product_id=p.id order by id desc limit 1 ) as thumb,(select image_path from products_images where product_id=p.id order by id desc limit 1 ) as image_path FROM `products` p
+where p.is_deleted=0 and p.status=1 and p.category_id=3 and p.country_id=".$country_id." order by p.id desc limit 11");
+
 ?>
 <section class="vc_row pt-50 pb-50">
 <div class="container">

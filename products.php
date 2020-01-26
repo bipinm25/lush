@@ -1,9 +1,11 @@
 <?php
 include_once('admin_panel/class/Crud.php');
 $crud = new Crud();
-$products = $crud->getData("SELECT p.id,p.name,p.category_id,pc.category,p.price,p.product_code,p.status,p.measurement_type m_type,p.measurement_value m_value,p.measurement_unit m_unit,date(p.added_date) added_date,(select thumb_path from products_images where product_id=p.id order by id desc limit 1 ) as thumb,(select image_path from products_images where product_id=p.id order by id desc limit 1 ) as image_path FROM `products` p left join product_category pc on p.category_id=pc.id
-where p.is_deleted=0 and p.status=1 order by p.id desc");
 include_once('header.php');
+
+$products = $crud->getData("SELECT p.id,p.name,p.category_id,pc.category,p.price,p.product_code,p.status,p.measurement_type m_type,p.measurement_value m_value,p.measurement_unit m_unit,date(p.added_date) added_date,(select thumb_path from products_images where product_id=p.id order by id desc limit 1 ) as thumb,(select image_path from products_images where product_id=p.id order by id desc limit 1 ) as image_path FROM `products` p left join product_category pc on p.category_id=pc.id
+where p.is_deleted=0 and p.status=1 and p.country_id=".$country_id." order by p.id desc");
+
 ?>
 <section class="vc_row pt-50 pb-50">
 <div class="container">

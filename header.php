@@ -1,3 +1,23 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+include_once('admin_panel/class/Crud.php');
+$crud = new Crud();
+$crud->getCountry();
+if(!empty($_SESSION['country_list'])) {
+	foreach($_SESSION['country_list'] as $k=>$v){
+		$c_ids[]=$v['id'];
+	}	
+}
+$country_id=0;
+if(isset($_SESSION['country']) && $_SESSION['country'] > 0 ){
+	$country_id = (int) $_SESSION['country'];
+}
+else{
+	header("location:location.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -124,6 +144,41 @@
 												Chocolates
 												<span class="submenu-expander">
 													<i class="fa fa-angle-down"></i></span></span></span></a></li>
+													<li class="menu-item-has-children position-applied">
+<a href="#">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+<?=$_SESSION['country_list'][$_SESSION['country']]['country']?>
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+<ul class="nav-item-children" style="display: none; opacity: 1;">
+<?php
+foreach($_SESSION['country_list'] as $k=>$v){
+if($v['is_active'] == 0) continue;
+echo '<li>
+<a href="index.php?country='.$v['id'].'">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt"><img src="assets/img/'.$v['flag'].'" style="margin-right: 5px;">
+'.strtoupper($v['country']).'
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i>
+</span>
+</span>
+</span>
+</a>
+</li>';	
+}
+?>
+</ul>
+</li>
 							</ul>
 						</div>
 					</div>

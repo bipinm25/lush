@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+<?php
+include_once('admin_panel/class/Crud.php');
+$crud = new Crud();
+$country = $crud->getData("SELECT id,country from country where is_active=1");
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 
@@ -32,62 +37,15 @@
 <div class="container">
 <div class="row">
 <div class="lqd-column col-md-10 col-md-offset-1 text-center px-lg-7" data-custom-animations="true" data-ca-options='{"triggerHandler":"inview", "animationTarget":"all-childs", "duration":1600, "delay":250, "easing":"easeOutQuint", "direction":"forward", "initValues":{"opacity":0, "translateY":100}, "animations":{"opacity":1, "translateY":0}}' data-parallax="true" data-parallax-from='{"translateY":1}' data-parallax-to='{"translateY":-220}' data-parallax-options='{"easing":"linear","reverse":true,"triggerHook":"onEnter", "overflowHidden": false}'>
-
-<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
+<?php
+foreach($country as $k => $coun){
+	echo '<a href="index.php?country='.$coun['id'].'" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options=\'{"scrollBelowSection":true}\'>
 <span>
-<span class="btn-txt">INDIA</span>
+<span class="btn-txt">'.$coun['country'].'</span>
 </span>
-</a>
-	
-<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">UAE</span>
-</span>
-</a>
-	
-	<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">OMAN</span>
-</span>
-</a>
-	
-	<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">MALASIA</span>
-</span>
-</a>
-	
-	<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">QATAR</span>
-</span>
-</a>
-	
-	<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">PHILIPPINES</span>
-</span>
-</a>
-	
-	<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">BAHRAIN</span>
-</span>
-</a>
-	
-	
-	<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">KUWAIT</span>
-</span>
-</a>
-	
-	
-	<a href="products.html" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
-<span>
-<span class="btn-txt">SAUDI</span>
-</span>
-</a>
+</a>';
+}
+?>
 </div>
 </div>
 </div>
