@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$msg='failed';
 	}
 
-	header("Location:Contact.php?msg=$msg");
+	header("Location:contact.php?msg=$msg");
 exit();
 }
 
