@@ -180,9 +180,9 @@ class Crud extends DbConfig
 	public function getCountry(){ //save country in session TODO
 	
 		if(!isset($_SESSION['country_list'])){
-			$country = $this->getData("select id,country,currency,flag,is_active from country order by id");
+			$country = $this->getData("select id,country,currency,flag,is_active,contact_email,address from country order by id");
 			foreach ($country as $k => $countrys) {
-				$_SESSION['country_list'][$countrys['id']]=['id' => $countrys['id'],'country' => $countrys['country'], 'currency' => $countrys['currency'], 'flag'=>$countrys['flag'], 'is_active' => $countrys['is_active'] ];	
+				$_SESSION['country_list'][$countrys['id']]=['id' => $countrys['id'],'country' => $countrys['country'], 'currency' => $countrys['currency'], 'flag'=>$countrys['flag'], 'is_active' => $countrys['is_active'], 'contact_email' => $countrys['contact_email'], 'address' =>  $countrys['address']  ];	
 			}
 		}
 		

@@ -1,10 +1,20 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include_once('admin_panel/class/Crud.php');
 $crud = new Crud();
 include_once('admin_panel/mail/smtp.php');
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	$to_mail_id = 'info@lushshopee.com';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	
+	if(!empty($_SESSION['country_list'][$_SESSION['country']]['contact_email'])){
+		$to_mailid = $_SESSION['country_list'][$_SESSION['country']]['contact_email'];
+		$to_mailid = empty($to_mailid)?'info@lushshopee.com':$to_mailid;
+	}
+
+	$to_mail_id = $to_mailid;
+	$cc_mail = 'info@lushshopee.com';
 	$parts = explode("@", $to_mail_id);
 	$to_name = $parts[0];
 	$subject = 'Enquiry Request';
@@ -19,12 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </table>';
 
 	$param = [
-		'to_mail' =>$to_mail_id,
+		'to_mail' => $to_mail_id,
+		'cc_mail' => $cc_mail,
 		'name' => $to_name,
 		'subject' => $subject,
 		'body' => $body
 	];
-
+	
 	$mail = new send_emails($param);
 
 	if ($mail->send_mail()) {

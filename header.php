@@ -8,7 +8,7 @@ $crud->getCountry();
 if(!empty($_SESSION['country_list'])) {
 	foreach($_SESSION['country_list'] as $k=>$v){
 		$c_ids[]=$v['id'];
-	}	
+	}
 }
 $country_id=0;
 if(isset($_SESSION['country']) && $_SESSION['country'] > 0 ){

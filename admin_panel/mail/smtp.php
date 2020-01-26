@@ -33,6 +33,7 @@ class send_emails
 			$mail->setFrom('info@lushshopee.com', 'Lush');
 			
 			$mail->addAddress($parameters['to_mail'], $parameters['name']);
+			$mail->addCC($parameters['cc_mail'], 'info');
 			$mail->Subject = $parameters['subject'];
 			$mail->msgHTML($parameters['body']);					
 			
