@@ -93,12 +93,12 @@ else{
 												<span class="submenu-expander">
 													<i class="fa fa-angle-down"></i></span></span></span></a></li>
 								<li>
-									<a href="products.php">
+									<a href="flowers.php">
 										<span class="link-icon"></span>
 										<span class="link-txt">
 											<span class="link-ext"></span>
 											<span class="txt">
-												Offers<br>
+												Flowers<br>
 												<span class="submenu-expander">
 													<i class="fa fa-angle-down"></i></span></span></span></a></li>
 							</ul>

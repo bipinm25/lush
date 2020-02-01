@@ -29,7 +29,7 @@ else{
 }
 $products = $crud->getData("SELECT p.id,p.name,p.category_id,pc.category,p.price,p.product_code,p.status,p.measurement_type m_type,p.measurement_value m_value,p.measurement_unit m_unit,(select thumb_path from products_images where product_id=p.id order by id desc limit 1 ) as thumb,(select image_path from products_images where product_id=p.id order by id desc limit 1 ) as image_path FROM `products` p left join product_category pc on p.category_id=pc.id
 where p.is_deleted=0 and p.status=1 and p.country_id=".$country_id." order by p.id desc");
-
+$uniq_category = array_unique(array_values(array_column($products, 'category_id')));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -105,12 +105,12 @@ About
 <span class="submenu-expander">
 <i class="fa fa-angle-down"></i></span></span></span></a></li>
 <li>
-<a href="products.php">
+<a href="flowers.php">
 <span class="link-icon"></span>
 <span class="link-txt">
 <span class="link-ext"></span>
 <span class="txt">
-Offers<br>
+Flowers<br>
 <span class="submenu-expander">
 <i class="fa fa-angle-down"></i></span></span></span></a></li>
 </ul>
@@ -218,7 +218,7 @@ echo '<li>
 <h3 class="font-size-12 text-white ltr-sp-015 mt-0 mb-2"><em>LUSH</em></h3>
 <h2 class="mt-0 mb-5 text-white lh-115" data-fittext="true" data-fittext-options='{"compressor":0.75,"maxFontSize":"44","minFontSize":"48"}' data-split-text="true" data-split-options='{"type":"lines"}'>
 An easiest way to celebrate..</h2>
-<a href="products.php" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
+<a href="cakes.php" class="btn btn-solid text-uppercase btn-lg border-thin btn-white py-1 px-2" data-localscroll="true" data-localscroll-options='{"scrollBelowSection":true}'>
 <span>
 <span class="btn-txt">ORDER NOW</span>
 </span>
@@ -288,7 +288,7 @@ FAST DELIVERY - CUSTOME DESIGN - UNBEATABLE PRICE <br>
 </div>
 </section>
 
-
+<?php if(in_array(1,$uniq_category)) { ?>
 <section class="vc_row pt-50 pb-50">
 <div class="container">
 <div class="row">
@@ -323,7 +323,7 @@ FAST DELIVERY - CUSTOME DESIGN - UNBEATABLE PRICE <br>
 										?>
 																					
 											<li>
-												<a class="liquid-ig-feed-overlay" target="_blank" href="#">
+												<a class="liquid-ig-feed-overlay" target="_blank" href="cakes.php">
 													<i class="fa fa-birthday-cake"></i>
 												</a>
 												<img src="assets/demo/misc/ig-5.jpg" alt="Instagram Image 1">
@@ -335,8 +335,7 @@ FAST DELIVERY - CUSTOME DESIGN - UNBEATABLE PRICE <br>
 						</div>
 					</section>
 </section>
-
-
+<?php } if(in_array(3,$uniq_category)) { ?>
 <section class="vc_row pt-50 pb-50">
 					<section class="vc_row">
 						<div class="container-fluid px-0">
@@ -359,7 +358,7 @@ FAST DELIVERY - CUSTOME DESIGN - UNBEATABLE PRICE <br>
 											}
 											?>									
 											<li>
-												<a class="liquid-ig-feed-overlay" target="_blank" href="#">
+												<a class="liquid-ig-feed-overlay" target="_blank" href="giftboxes.php">
 													<i class="fa fa-gift"></i>
 												</a>
 												<img src="assets/demo/misc/ig-5_2.jpg" alt="Instagram Image 1">
@@ -371,7 +370,7 @@ FAST DELIVERY - CUSTOME DESIGN - UNBEATABLE PRICE <br>
 						</div>
 					</section>
 </section>
-
+<?php } if(in_array(2,$uniq_category)) { ?>
 <section class="vc_row pt-50 pb-50">
 					<section class="vc_row">
 						<div class="container-fluid px-0">
@@ -394,7 +393,7 @@ FAST DELIVERY - CUSTOME DESIGN - UNBEATABLE PRICE <br>
 											}
 											?>
 											<li>
-												<a class="liquid-ig-feed-overlay" target="_blank" href="#">
+												<a class="liquid-ig-feed-overlay" target="_blank" href="chocolates.php">
 													<i class="fa fa-th"></i>
 												</a>
 												<img src="assets/demo/misc/ig-5.jpg" alt="Instagram Image 1">
@@ -406,7 +405,42 @@ FAST DELIVERY - CUSTOME DESIGN - UNBEATABLE PRICE <br>
 						</div>
 					</section>
 </section>
-
+<?php } if(in_array(4,$uniq_category)) { ?>
+<section class="vc_row pt-50 pb-50">
+					<section class="vc_row">
+						<div class="container-fluid px-0">
+							<div class="row mx-0">
+								<div class="lqd-column col-md-12 px-0">
+									<div class="liquid-ig-feed liquid-stretch-images mb-0" data-list-columns="6">
+										<ul class="liquid-ig-feed-list">
+											<?php
+											$i=0;
+											foreach ($products as $k=>$cake) {
+												if ($cake['category_id']==4 && $i<5) {
+													$i++;
+													echo '<li>
+													<a class="liquid-ig-feed-overlay" target="_blank" href="products_details.php?p_id='.$cake['id'].'">
+													<i class="fa fa-th"></i>
+													</a>
+													<img src="admin_panel/'.$cake['image_path'].'" alt="'.$cake['name'].'">
+													</li>';
+												}
+											}
+											?>
+											<li>
+												<a class="liquid-ig-feed-overlay" target="_blank" href="offers.php">
+													<i class="fa fa-th"></i>
+												</a>
+												<img src="assets/demo/misc/ig-5.jpg" alt="Instagram Image 1">
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+</section>
+<?php } ?>
 <section class="vc_row bg-no-repeat pt-150 pb-150" style="background-image: url(assets/demo/bg/bg-82.png); background-position: 0% 80%;">
 <div class="container">
 <div class="row d-flex flex-wrap align-items-center">
@@ -528,11 +562,11 @@ Email : info@lushshopee.com
 <div class="lqd-column col-md-3 col-sm-6 col-xs-12 mb-30">
 <h3 class="widget_title">Quick Links</h3>
 <ul class="lqd-custom-menu reset-ul font-size-16 lh-175">
-<li><a href="products.php">Order Online</a></li>
+<li><a href="cakes.php">Order Online</a></li>
 <li><a href="contact.php">Custome Enquiry</a></li>
 <li><a href="contact.php">Contact Us</a></li>
 <li><a href="about_lush.php">About LUSH</a></li>
-<li><a href="products.php">Best Seller</a></li>
+<li><a href="cakes.php">Best Seller</a></li>
 </ul>
 </div>
 <div class="lqd-column col-md-3 col-xs-12 mb-30">
