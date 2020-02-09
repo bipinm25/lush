@@ -58,139 +58,117 @@ else{
 		<div class="megamenu-hover-bg"></div>
 		<div class="container-fluid mainbar-container">
 			<div class="mainbar">
-				<div class="row mainbar-row align-items-lg-stretch px-5">
-					<div class="col">
-						<div class="header-module">
-							<ul class="social-icon social-icon-md">
-								<li>
-									<a href="#" target="_blank">
-										<i class="fa fa-youtube-play"></i></a></li>
-								<li>
-									<a href="#" target="_blank">
-										<i class="fa fa-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-auto">
-						<div class="collapse navbar-collapse" id="main-header-collapse">
-							<ul id="primary-nav" class="main-nav nav main-nav-hover-fade-inactive align-items-lg-stretch justify-content-lg-start" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
-								<li>
-									<a href="index.php">
-										<span class="link-icon"></span>
-										<span class="link-txt">
-											<span class="link-ext"></span>
-											<span class="txt">
-												Home
-												<span class="submenu-expander">
-													<i class="fa fa-angle-down"></i></span></span></span></a></li>
-								<li>
-									<a href="about_lush.php">
-										<span class="link-icon"></span>
-										<span class="link-txt">
-											<span class="link-ext"></span>
-											<span class="txt">
-												About
-												<span class="submenu-expander">
-													<i class="fa fa-angle-down"></i></span></span></span></a></li>
-								<li>
-									<a href="flowers.php">
-										<span class="link-icon"></span>
-										<span class="link-txt">
-											<span class="link-ext"></span>
-											<span class="txt">
-												Flowers<br>
-												<span class="submenu-expander">
-													<i class="fa fa-angle-down"></i></span></span></span></a></li>
-							</ul>
-						</div>
-						<div class="navbar-header">
-							<a class="navbar-brand" href="index.php" rel="home">
-								<span class="navbar-brand-inner">
-									<img class="mobile-logo-default" src="assets/img/logo/restaurant-dark.png" srcset="./assets/img/logo/restaurant-dark@2x.png 2x" alt="LUSH - order gifts online in Kerala, Kannur, Kochi">
-									<img class="logo-default" src="assets/img/logo/restaurant-light.png" srcset="./assets/img/logo/restaurant-light@2x.png 2x" alt="LUSH - order gifts online in Kerala, Kannur, Kochi"></span></a>
-							<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse" data-target="#main-header-collapse" aria-expanded="false" data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
-								<span class="sr-only">Toggle navigation</span>
-								<span class="bars">
-									<span class="bar"></span>
-									<span class="bar"></span>
-									<span class="bar"></span></span></button>
-						</div>
-						<div class="collapse navbar-collapse" id="main-header-collapse">
-							<ul id="primary-nav" class="main-nav nav main-nav-hover-fade-inactive align-items-lg-stretch justify-content-lg-start" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
-								<li>
-									<a href="cakes.php">
-										<span class="link-icon"></span>
-										<span class="link-txt">
-											<span class="link-ext"></span>
-											<span class="txt">
-												Cakes
-												<span class="submenu-expander">
-													<i class="fa fa-angle-down"></i></span></span></span></a></li>
-								<li>
-									<a href="giftboxes.php">
-										<span class="link-icon"></span>
-										<span class="link-txt">
-											<span class="link-ext"></span>
-											<span class="txt">
-												Gift Box
-												<span class="submenu-expander">
-													<i class="fa fa-angle-down"></i></span></span></span></a></li>
-								<li>
-									<a href="chocolates.php">
-										<span class="link-icon"></span>
-										<span class="link-txt">
-											<span class="link-ext"></span>
-											<span class="txt">
-												Chocolates
-												<span class="submenu-expander">
-													<i class="fa fa-angle-down"></i></span></span></span></a></li>
-													<li class="menu-item-has-children position-applied">
-<a href="#">
+				 <div class="row mainbar-row align-items-lg-stretch px-5">
+<div class="col">
+
+</div>
+<div class="col-auto">
+<div class="collapse navbar-collapse" id="main-header-collapse">
+<ul id="primary-nav" class="main-nav nav main-nav-hover-fade-inactive align-items-lg-stretch justify-content-lg-start" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
+<li>
+<a href="index.php"><span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+Home
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i></span></span></span></a></li>
+<li>
+<a href="about_lush.php">
 <span class="link-icon"></span>
 <span class="link-txt">
 <span class="link-ext"></span>
 <span class="txt">
-<?=$_SESSION['country_list'][$_SESSION['country']]['country']?>
+About
 <span class="submenu-expander">
-<i class="fa fa-angle-down"></i>
-</span>
-</span>
-</span>
-</a>
-<ul class="nav-item-children" style="display: none; opacity: 1;">
-<?php
-foreach($_SESSION['country_list'] as $k=>$v){
-if($v['is_active'] == 0) continue;
-echo '<li>
-<a href="index.php?country='.$v['id'].'">
+<i class="fa fa-angle-down"></i></span></span></span></a></li>
+<li>
+<a href="flowers.php">
 <span class="link-icon"></span>
 <span class="link-txt">
 <span class="link-ext"></span>
-<span class="txt"><img src="assets/img/'.$v['flag'].'" style="margin-right: 5px;">
-'.strtoupper($v['country']).'
+<span class="txt">
+Flowers<br>
 <span class="submenu-expander">
-<i class="fa fa-angle-down"></i>
-</span>
-</span>
-</span>
-</a>
-</li>';	
-}
-?>
+<i class="fa fa-angle-down"></i></span></span></span></a></li>
 </ul>
-</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col text-right">
-						<div class="header-module">
-							<a href="contact.php" class="btn btn-naked text-uppercase btn-icon-md btn-icon-circle btn-icon-solid">
-								<span>
-									<span class="btn-txt">Contact us</span>
-									<span class="btn-icon">
-										<i class="fa fa-angle-right"></i></span></span></a></div>
-					</div>
-				</div>
+</div>
+<div class="navbar-header">
+<a class="navbar-brand" href="index.php" rel="home">
+<span class="navbar-brand-inner">
+<img class="mobile-logo-default" src="assets/img/logo/restaurant-dark.png" srcset="./assets/img/logo/restaurant-dark@2x.png 2x" alt="LUSH - order gifts online in Kerala, Kannur, Kochi">
+<img class="logo-default" src="assets/img/logo/restaurant-light.png" srcset="./assets/img/logo/restaurant-light@2x.png 2x" alt="LUSH - order gifts online in Kerala, Kannur, Kochi"></span></a>
+<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse" data-target="#main-header-collapse" aria-expanded="false" data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
+<span class="sr-only">Toggle navigation</span>
+<span class="bars">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span></span></button>
+</div>
+<div class="collapse navbar-collapse" id="main-header-collapse">
+<ul id="primary-nav" class="main-nav nav main-nav-hover-fade-inactive align-items-lg-stretch justify-content-lg-start" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }'>
+<li>
+<a href="cakes.php">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+Cakes
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i></span></span></span></a></li>
+<li>
+<a href="giftboxes.php">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+Gift Box
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i></span></span></span></a></li>
+	
+	<li>
+<a href="chocolates.php">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+Chocolates
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i></span></span></span></a></li>
+
+	<li>
+<a href="contact.php">
+<span class="link-icon"></span>
+<span class="link-txt">
+<span class="link-ext"></span>
+<span class="txt">
+Contact
+<span class="submenu-expander">
+<i class="fa fa-angle-down"></i></span></span></span></a></li>
+	
+</ul>
+</div>
+</div>
+<div class="col text-right">
+<div class="header-module">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="padding: 5px;">
+    <img src="assets/img/<?=$_SESSION['country_list'][$_SESSION['country']]['flag']?>" style="margin-right: 5px;"></a>
+    </button>
+    <div class="dropdown-menu" style="padding: 10px;">
+    <?php
+    	if(isset($_SESSION['country_list'])){
+    		foreach($_SESSION['country_list'] as $k => $data){ if($k==1) continue;
+    			echo '<a class="dropdown-item" href="index.php?country='.$data['id'].'"><img src="assets/img/'.$data['flag'].'" style="margin-right: 5px;">'.$data['country'].'</a><br>';
+    		}
+    	}
+    ?>   
+  </div>
+</div>
+</div>
+	
+</div>
+</div>
 			</div>
 		</div>
 	</div>

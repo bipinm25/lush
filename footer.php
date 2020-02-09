@@ -54,6 +54,7 @@
 	</section>
 </footer>
 </div>
+  <script src="assets/js/jquery.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCUnWOSK2b5WtvMOAI8j55OHhS_sNv2VfA"> </script>
 <script src="assets/vendors/jquery.min.js"> </script>
 <script src="assets/js/theme-vendors.js"> </script>

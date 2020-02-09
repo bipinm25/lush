@@ -41,35 +41,55 @@ foreach ($get_product  as $k => $v) {
 	$edit=false;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {	
 
 	$product_name = $crud->escape_string($_POST['product_name']);
 	$product_code = $crud->escape_string($_POST['product_code']);
 	$description = $crud->escape_string($_POST['description']);
-	$_POST['product_price'] = $crud->escape_string($_POST['product_price']);
+	//$_POST['product_price'] = $crud->escape_string($_POST['product_price']);
 	$_POST['measurement_type'] = $crud->escape_string($_POST['measurement_type']);
 	$_POST['measurement_value'] = $crud->escape_string($_POST['measurement_value']);
 	$_POST['measurement_unit'] = $crud->escape_string($_POST['measurement_unit']);
 	
-	//@TODO
-	//$msg = $validation->check_empty($_POST, array('product_name', 'product_category_id', 'product_price'));
-	
-	//$_POST['product_price']=number_format($_POST['product_price'], 2, '.', '');
-	if ((int) $_POST['p_id'] == 0) {
+	if ((int) $_POST['p_id'] == 0) {	
 		$updated="added=added";
-		$last_insert_id = $crud->execute("INSERT INTO products(country_id,name,category_id,description,price,product_code,measurement_type,measurement_value,measurement_unit,status,added_date,added_by) VALUES(".$_POST['product_country_id'].",'$product_name',".$_POST['product_category_id'].",'$description',".$_POST['product_price'].",'$product_code','".$_POST['measurement_type']."',".$_POST['measurement_value'].",'".$_POST['measurement_unit']."',".$_POST['status'].",NOW(),'admin')");
+		
+		foreach($_POST['product_price'] as $k => $val){
+		if(!empty($val)){
+			$product_price = $crud->escape_string($val);
+			
+			$last_insert_id = $crud->execute("INSERT INTO products(country_id,name,category_id,description,price,product_code,measurement_type,measurement_value,measurement_unit,
+												status,added_date,added_by) VALUES(".$k.",'$product_name',".$_POST['product_category_id'].",'$description',".$product_price.",
+												'$product_code','".$_POST['measurement_type']."',".$_POST['measurement_value'].",'".$_POST['measurement_unit']."',
+												".$_POST['status'].",NOW(),'admin')");
+			$prod_id[] = $last_insert_id;						
+			}			
+		}
+		
+		if (sizeof($_FILES['upload_files']) > 0) {
+			$crud->files_upload($prod_id, $_FILES['upload_files']);
+		}
+			
 	}
  else if ((int) $_POST['p_id'] > 0) {
-	 $updated="added=updated";
-	 $last_insert_id = (int) $_POST['p_id'];
+ 
+	 $updated="added=updated";	 
+	 $last_insert_id = (int) $_POST['p_id']; 
+	 
+	 
+	 $prd_price = $crud->escape_string($_POST['product_price'][$_POST['product_country_id']]);
+	  
+	 
 	 $crud->execute("update products set country_id=".$_POST['product_country_id'].",name ='$product_name',
-	 category_id = ".$_POST['product_category_id']." ,description ='$description' ,price = ".$_POST['product_price']." ,product_code ='$product_code' ,measurement_type ='".$_POST['measurement_type']."' ,measurement_value =".$_POST['measurement_value']." ,measurement_unit ='".$_POST['measurement_unit']."' ,status = ".$_POST['status']." ,update_date=NOW(),updated_by='admin' where id =$last_insert_id");
-	}
-	
-	   if (sizeof($_FILES['upload_files']) > 0) {
-	   
+	 category_id = ".$_POST['product_category_id']." ,description ='$description' ,price = ".$prd_price." ,product_code ='$product_code' ,measurement_type ='".$_POST['measurement_type']."' ,measurement_value =".$_POST['measurement_value']." ,measurement_unit ='".$_POST['measurement_unit']."' ,status = ".$_POST['status']." ,update_date=NOW(),updated_by='admin' where id =$last_insert_id");
+	 
+	 if (sizeof($_FILES['upload_files']) > 0) {   
 		   $crud->files_upload($last_insert_id, $_FILES['upload_files']);
 		}
+	 
+	}
+	
+	   
 		
 		header("Location:product_list.php?".$updated);
 		exit();
@@ -127,16 +147,19 @@ opacity: 1;
                       <label class="col-sm-2 control-label">Product Country</label>
                       <div class="col-sm-10">
                       <?=$_SESSION['is_global']?'':'<input type="hidden" name="product_country_id" value="'.$_SESSION['country_id'].'" />'?>
-						<select name="product_country_id"  <?=$_SESSION['is_global']?'':'disabled="true"'?> class="form-control m-b">                     
+						<select <?=$edit?'':'multiple="multiple"  size="6"' ?>   name="product_country_id" id="product_country_id"  <?=$_SESSION['is_global']?'':'disabled="true"'?> class="form-control m-b required_field">                     
                           <?php
 							$select_country='';
-							foreach ($country as $k => $countrys) {
-								if ($edit) {
-									$select_country = $get_product['country_id'] == $countrys['id']? 'selected="selected"':"" ;
-								}else{
-									$select_country = ($_SESSION['is_global']?'':$_SESSION['country_id']) == $countrys['id']? 'selected="selected"':"" ;
+							foreach ($_SESSION['country_list'] as $k => $countrys) {
+								if($countrys['id']!=1){
+									if ($edit) {
+										$select_country = $get_product['country_id'] == $countrys['id']? 'selected="selected"':"" ;
+									}else{
+										$select_country = ($_SESSION['is_global']?'':$_SESSION['country_id']) == $countrys['id']? 'selected="selected"':"" ;
+									}
+									echo '<option '.$select_country.' data-currency="'.$countrys['currency'].'" value="'.$countrys['id'].'">'.$countrys['country'].'</option>';
 								}
-								echo '<option '.$select_country.' data-currency="'.$countrys['currency'].'" value="'.$countrys['id'].'">'.$countrys['country'].'</option>';
+								
 						}
                           ?>                         
                         </select>
@@ -173,17 +196,10 @@ opacity: 1;
 							<div class="col-sm-10">
 								<input type="text" placeholder="Required" name="product_code" value="<?=$edit?$get_product['product_code']:"" ?>" class="form-control required_field" id="product_code">
 							</div>
-						</div>
+						</div>						
 						<div class="line line-dashed line-lg pull-in"></div>
 						<div class="form-group">
-							<label class="col-sm-2 control-label" for="product_price">Price <span id="currency"></span></label>
-							<div class="col-sm-10">
-								<input type="text" placeholder="Required" name="product_price" value="<?=$edit?number_format($get_product['price'],2,".",""):"" ?>" class="form-control required_field" id="product_price">
-							</div>
-						</div>
-						<div class="line line-dashed line-lg pull-in"></div>
-						<div class="form-group">
-					<label class="col-sm-2 control-label" for="measurement_type">Measurement*</label>
+					<label class="col-sm-2 control-label" for="measurement_type">Measurement *</label>
 							<div class="col-sm-3">						
 								<select name="measurement_type" id="measurement_type" class="form-control m-b">
 								<?php
@@ -200,12 +216,37 @@ opacity: 1;
 								<select name="measurement_unit" data-m_unit="<?=$edit?$get_product['measurement_unit']:"" ?>" id="measurement_unit" class="form-control m-b">									
 								</select>
 							</div>
+							
 						</div>
+						
+						<?php
+						$sess_countrylist = $_SESSION['country_list'];						
+						if(!$_SESSION['is_global']){
+							unset($sess_countrylist);
+							$sess_countrylist[$_SESSION['country_id']] = $_SESSION['country_list'][$_SESSION['country_id']];						
+						}else if($edit){
+							unset($sess_countrylist);
+							$sess_countrylist[$_SESSION['country_id']] = $_SESSION['country_list'][$get_product['country_id']];
+						}
+						
+							foreach($sess_countrylist as $k => $val){ if($val['id']!=1){ ?>
+						<div class="form-group <?=!$_SESSION['is_global']?'':($edit?'':'hidden')?> price_div country_id_<?=$val['id']?>">
+					<label class="col-sm-2 control-label ctry_lbl" for="">Price in <?=$val['country']?> (<?=$val['currency']?>)</label>							
+							<div class="col-sm-10">
+							<input type="text" placeholder="Required" name="product_price[<?=$val['id']?>]" value="<?=$edit?number_format($get_product['price'],2,".",""):"" ?>" class="form-control <?=$_SESSION['is_global']?'':'required_field'?> product_price">
+							
+								
+							</div> <span id="currency"></span>
+						</div>
+						<?php } }	?>
+						
+						
+						
 						<div class="line line-dashed line-lg pull-in"></div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label">Description</label>
 							<div class="col-sm-10">
-								<textarea rows="5" name="description" class="form-control"><?=$edit?$get_product['description']:"" ?></textarea>
+								<textarea rows="5" name="description" id="description" class="form-control"><?=$edit?$get_product['description']:"" ?></textarea>
 							</div>
 						</div>
 						<div class="line line-dashed line-lg pull-in"></div>
@@ -269,10 +310,12 @@ opacity: 1;
 	 $('#submit').on('click',function(event) {
 		
 		 msg='';
-		 $('.required_field').each(function(){			 
-			if ($(this).val()=='') {				
+		 $('.required_field').each(function(){		 
+			if ($(this).val()=='' || $(this).val()==null) {				
 				$(this).parent().parent().addClass('has-error');
-				msg+=$(this).parent().parent().find('label').text()+' is required \n';			
+				lbl_txt = $(this).parent().parent().find('label').text();
+				lbl_txt = lbl_txt.replace("Choose file","");
+				msg+=lbl_txt+' is required \n';			
 			}else{
 				$(this).parent().parent().removeClass('has-error');
 			}
@@ -282,8 +325,7 @@ opacity: 1;
 			 alert(msg);
 			 event.preventDefault();
 		 }else{
-		 
-			// $('#product_form').submit();
+			 $('#product_form').submit();
 		 }
 		 
 		 
@@ -303,10 +345,10 @@ opacity: 1;
 		 });
 		 
 		 
-		 if ($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+		 if ($.inArray(ext, [ 'jpg', 'jpeg']) == -1) {
 			 $('.bootstrap-filestyle').find('input').val('');
 			 this.value = '';
-			 alert('This is not an allowed file type!. Allowed types are jpg, jpeg, png');
+			 alert('This is not an allowed file type!. Allowed types are jpg, jpeg');
 			 return false;
 		 }else{
 			 if (l_file.length>0) {
@@ -327,15 +369,39 @@ opacity: 1;
 		
 	 });
 	 
-	 $('select[name="product_country_id"]').on('change',function(){
-	    var element = $(this).find('option:selected'); 
-        var curr = element.data("currency");
-        $("#currency").text('');
-	 	if(curr.length>0) $("#currency").text(`(`+curr+`)`);
-	 	
-	 });
+	
 	 $(function(){
 	 	$('select[name="product_country_id"]').trigger('change');
 	 });
+	 
+	 <?php if($edit){ ?>
+	 $('select[name="product_country_id"]').on('change',function(){
+	    var element = $(this).find('option:selected'); 
+        var curr = element.data("currency");
+        var lbl = element.text();        
+        $(".ctry_lbl").text('');
+        $('.product_price').attr('name','product_price['+element.val()+']');
+	 	if(curr.length>0) $(".ctry_lbl").text(`Price in `+lbl+` (`+curr+`)`);
+	 	
+	 });	 
+	 <?php } else { ?>
+	 	 $('#product_country_id').click(function() {	 
+	  $('.price_div').each(function(){
+	  	 $(this).addClass('hidden');
+	  	 $(this).find('input').removeClass('required_field');
+		});	 
+	 var opts = $(this).val();	 
+		 $.each(opts,function(k,v){
+		 	 $('.price_div').each(function(k1,v1){
+	 			if($(this).hasClass('country_id_'+v)){
+	 				$(this).removeClass('hidden');
+	 				$(this).find('input').addClass('required_field');
+	 			}
+			});
+		 });
+	});	 
+	 <?php } ?>
+	 
+	   CKEDITOR.replace('description'); 
 	 
  </script>

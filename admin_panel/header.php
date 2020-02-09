@@ -16,6 +16,7 @@ include_once("check_login.php");
 <link rel="stylesheet" href="js/datepicker/datepicker.css" type="text/css" />
 <link rel="stylesheet" href="js/slider/slider.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <script src="js/ckeditor/ckeditor.js"></script>
   <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>

@@ -13,6 +13,7 @@ class Crud extends DbConfig
 	
 	public function getData($query)
 	{		
+	
 		$result = $this->connection->query($query);
 		
 		if ($result == false) {
@@ -82,7 +83,15 @@ class Crud extends DbConfig
 			
 			if (move_uploaded_file($files['tmp_name'][$key],$upload_file)) {
 				$this->createThumbnail($newfilename, $thumb_width, $thumb_height, $upload_dir, $upload_dir_thumbs);
-				$this->execute("insert into products_images(product_id,image_path,thumb_path,added_date,added_by) VALUES($table_id,'$upload_file' ,'".$upload_dir_thumbs.$newfilename."' ,NOW(),'admin')");
+				if(is_array($table_id)){				
+					foreach($table_id as $ids){
+						$this->execute("insert into products_images(product_id,image_path,thumb_path,added_date,added_by) VALUES($ids,'$upload_file' ,'".$upload_dir_thumbs.$newfilename."' ,NOW(),'admin')");
+					}
+				}
+				else if($table_id>0){				
+					$this->execute("insert into products_images(product_id,image_path,thumb_path,added_date,added_by) VALUES($table_id,'$upload_file' ,'".$upload_dir_thumbs.$newfilename."' ,NOW(),'admin')");
+				}
+				
 			}
 		}		
 		
@@ -282,6 +291,16 @@ class Crud extends DbConfig
 	function is_decimal($val)
 	{
 		return is_numeric($val) && floor($val) != $val;
+	}
+	
+	public function err_log($data, $flag = 0){
+		if($flag == 0){
+			error_log($data);
+		}
+		else{
+			error_log(print_r($data,1));
+		}
+		
 	}
 	
 	
