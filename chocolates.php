@@ -14,7 +14,7 @@ $html='';
 		foreach($fetch_prod as $k => $v){
 			$html.='<li><a class="liquid-ig-feed-overlay" target="_blank" href="products_details.php?p_id='.$v['id'].'">
 					<i class="fa fa-th"></i></a>
-					<img src="admin_panel/'.$v['image_path'].'" alt="'.$v['name'].'"></li>';
+					<img src="admin_panel/'.$v['thumb'].'" alt="'.$v['name'].'"></li>';
 		}
 	
 	echo $html;
@@ -52,7 +52,7 @@ $totalRecord = $crud->number_of_records("SELECT id from products p where p.is_de
 													<a class="liquid-ig-feed-overlay" target="_blank" href="products_details.php?p_id='.$cake['id'].'">
 													<i class="fa fa-th"></i>
 													</a>
-													<img src="admin_panel/'.$cake['image_path'].'" alt="'.$cake['name'].'">
+													<img src="admin_panel/'.$cake['thumb'].'" alt="'.$cake['name'].'">
 													</li>';
 												}
 												?>											

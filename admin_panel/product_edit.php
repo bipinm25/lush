@@ -174,7 +174,7 @@ opacity: 1;
 					</div>
                     <div class="line line-dashed line-lg pull-in"></div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Product Category</label>
+                      <label class="col-sm-2 control-label">Product Category*</label>
                       <div class="col-sm-10">
 								<select name="product_category_id" class="form-control m-b required_field">
                           <option value="">--SELECT--</option>
@@ -261,14 +261,14 @@ opacity: 1;
 						</div>
 						<div class="line line-dashed line-lg pull-in"></div>
 						<div class="form-group">
-						<label class="col-sm-2 control-label">Product Image</label>
+						<label class="col-sm-2 control-label">Product Image*</label>
 						<div class="col-sm-10">					
 						<?php								
 						if ($edit && !empty($image_path)) {							
 							foreach ($image_path as $k => $img) {
 								echo '<div class="img-wrap">
 								<span class="close"><i class="fa fa-trash-o"></i></span>
-											<img src="'.$img['thumb'].'" data-id="'.$img['img_id'].'">
+											<img height="100" width="90" src="'.$img['thumb'].'" data-id="'.$img['img_id'].'">
 											</div>&nbsp;';
 																	
 								//echo '<a href="Javascript:;" data-id="'.$img['img_id'].'"><img src="'.$img['thumb'].'" alt=""></a>&nbsp;';

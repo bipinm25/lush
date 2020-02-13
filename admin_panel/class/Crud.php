@@ -1,5 +1,6 @@
 <?php
 include_once 'DbConfig.php';
+include_once 'common_settings.php';
 
 class Crud extends DbConfig
 {
@@ -69,8 +70,9 @@ class Crud extends DbConfig
 	
 	public function files_upload($table_id, $files)
 	{	
-		$thumb_width = 100;
-		$thumb_height = 90;
+		global $thumb_size;
+		$thumb_width = $thumb_size[0]['width'];
+		$thumb_height = $thumb_size[0]['height'];
 		$upload_dir = 'front_end/gallery/';
 		$upload_dir_thumbs = 'front_end/gallery/thumb/';		
 			

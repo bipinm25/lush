@@ -34,14 +34,14 @@ where p.is_deleted=0 and p.status=1 and p.country_id=".$country_id." order by p.
 													<a class="liquid-ig-feed-overlay" target="_blank" href="products_details.php?p_id='.$cake['id'].'">
 													<i class="fa fa-birthday-cake"></i>
 													</a>
-													<img src="admin_panel/'.$cake['image_path'].'" alt="'.$cake['name'].'">
+													<img src="admin_panel/'.$cake['thumb'].'" alt="'.$cake['name'].'">
 													</li>';
 						}
 					}
 					?>
 
 											<li>
-												<a class="liquid-ig-feed-overlay" target="_blank" href="#">
+												<a class="liquid-ig-feed-overlay" target="_blank" href="cakes.php">
 													<i class="fa fa-birthday-cake"></i>
 												</a>
 												<img src="assets/demo/misc/ig-5.jpg" alt="Instagram Image 1">
@@ -70,13 +70,13 @@ where p.is_deleted=0 and p.status=1 and p.country_id=".$country_id." order by p.
 													<a class="liquid-ig-feed-overlay" target="_blank" href="products_details.php?p_id='.$cake['id'].'">
 													<i class="fa fa-gift"></i>
 													</a>
-													<img src="admin_panel/'.$cake['image_path'].'" alt="'.$cake['name'].'">
+													<img src="admin_panel/'.$cake['thumb'].'" alt="'.$cake['name'].'">
 													</li>';
 						}
 					}
 					?>
 											<li>
-												<a class="liquid-ig-feed-overlay" target="_blank" href="#">
+												<a class="liquid-ig-feed-overlay" target="_blank" href="giftboxes.php">
 													<i class="fa fa-gift"></i>
 												</a>
 												<img src="assets/demo/misc/ig-5_2.jpg" alt="Instagram Image 1">
@@ -106,13 +106,13 @@ where p.is_deleted=0 and p.status=1 and p.country_id=".$country_id." order by p.
 													<a class="liquid-ig-feed-overlay" target="_blank" href="products_details.php?p_id='.$cake['id'].'">
 													<i class="fa fa-th"></i>
 													</a>
-													<img src="admin_panel/'.$cake['image_path'].'" alt="'.$cake['name'].'">
+													<img src="admin_panel/'.$cake['thumb'].'" alt="'.$cake['name'].'">
 													</li>';
 						}
 					}
 					?>
 											<li>
-												<a class="liquid-ig-feed-overlay" target="_blank" href="#">
+												<a class="liquid-ig-feed-overlay" target="_blank" href="chocolates.php">
 													<i class="fa fa-th"></i>
 												</a>
 												<img src="assets/demo/misc/ig-5.jpg" alt="Instagram Image 1">

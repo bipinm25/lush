@@ -7,6 +7,8 @@
 					  4 => ['text'=>'Not Delivered', 'class'=>'label label-danger'],
 				   ];
 	$category_color_Chart =[ 'cakes' =>'#f73b3b', 'chocolate'=>'#3abf9a', 'gift box' => '#3471e0', 'offers' =>'#c836ec'];
+	
+	$thumb_size = ['0' => ['width' =>285, 'height' => 285]];
    	 
 	
 ?>
